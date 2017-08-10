@@ -20,7 +20,7 @@ struct Album: Jsonable {
         albumId = json["albumId"].int ?? 0
         id = json["id"].int ?? 0
         title = json["title"].string ?? ""
-        url = json["thumbnailUrl"].string ?? ""
+        url = json["url"].string ?? ""
         thumbnailUrl = json["thumbnailUrl"].string ?? ""
     }
 }
