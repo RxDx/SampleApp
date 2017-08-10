@@ -69,6 +69,14 @@ extension AlbumListController: UITableViewDataSource {
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Album \(Array(viewModel!.albumsHash.keys).sorted()[section])"
+    }
+
+    func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+        return Array(viewModel!.albumsHash.keys).sorted().map{"\($0)"}
+    }
 }
 
 extension AlbumListController: UITableViewDelegate {
