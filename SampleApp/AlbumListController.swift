@@ -72,5 +72,11 @@ extension AlbumListController: UITableViewDataSource {
 }
 
 extension AlbumListController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let album = viewModel?.albumFor(section: indexPath.section, row: indexPath.row),
+           let controller = AlbumDetailController.storyboardInstance(album: album) {
     
+            navigationController?.pushViewController(controller, animated: true)
+        }
+    }
 }

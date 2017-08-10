@@ -22,6 +22,8 @@
 		5B83665A1F3C958D00749699 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8366591F3C958D00749699 /* AppDelegate.swift */; };
 		5B8366611F3C958D00749699 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B8366601F3C958D00749699 /* Assets.xcassets */; };
 		5B8366641F3C958D00749699 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B8366621F3C958D00749699 /* LaunchScreen.storyboard */; };
+		5BB644071F3CB2DA00869A6C /* AlbumDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB644061F3CB2DA00869A6C /* AlbumDetailController.swift */; };
+		5BB644091F3CB2F000869A6C /* AlbumDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BB644081F3CB2F000869A6C /* AlbumDetail.storyboard */; };
 		86632B38B317C2B7970AB1A0 /* Pods_SampleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 462445B1B4B9AD9981881C31 /* Pods_SampleApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +46,8 @@
 		5B8366601F3C958D00749699 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B8366631F3C958D00749699 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B8366651F3C958D00749699 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BB644061F3CB2DA00869A6C /* AlbumDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumDetailController.swift; sourceTree = "<group>"; };
+		5BB644081F3CB2F000869A6C /* AlbumDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AlbumDetail.storyboard; sourceTree = "<group>"; };
 		99AA0949BD26489FBEC53248 /* Pods-SampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SampleApp/Pods-SampleApp.debug.xcconfig"; sourceTree = "<group>"; };
 		BEC258C9D36907A110F13F0E /* Pods-SampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-SampleApp/Pods-SampleApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -140,6 +144,8 @@
 		5B104F0C1F3C9BE8001B7A6D /* AlbumDetail */ = {
 			isa = PBXGroup;
 			children = (
+				5BB644061F3CB2DA00869A6C /* AlbumDetailController.swift */,
+				5BB644081F3CB2F000869A6C /* AlbumDetail.storyboard */,
 			);
 			name = AlbumDetail;
 			sourceTree = "<group>";
@@ -246,6 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B104F121F3C9C32001B7A6D /* AlbumList.storyboard in Resources */,
+				5BB644091F3CB2F000869A6C /* AlbumDetail.storyboard in Resources */,
 				5B8366641F3C958D00749699 /* LaunchScreen.storyboard in Resources */,
 				5B8366611F3C958D00749699 /* Assets.xcassets in Resources */,
 			);
@@ -330,6 +337,7 @@
 				5B104F161F3C9ED3001B7A6D /* PhotosRepository.swift in Sources */,
 				5B104F1C1F3CADE4001B7A6D /* AlbumCell.swift in Sources */,
 				5B104F001F3C979F001B7A6D /* Album.swift in Sources */,
+				5BB644071F3CB2DA00869A6C /* AlbumDetailController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
