@@ -30,3 +30,15 @@ extension UIViewController {
         self.view.hideLoading()
     }
 }
+
+extension UIViewController: BaseViewModelProtocol {
+    func updateUI() {
+        
+    }
+    
+    func showAlert(_ message: String) {
+        self.showAlert(message)
+    }
+    
+    
+}

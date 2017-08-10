@@ -9,5 +9,6 @@ target 'SampleApp' do
   pod 'Alamofire', '~> 4.4'
   pod 'SwiftyJSON'
   pod 'MBProgressHUD', '~> 1.0.0'
+  pod 'Kingfisher'
 
 end

@@ -6,38 +6,11 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Album List-->
-        <scene sceneID="bgR-oX-JFC">
-            <objects>
-                <tableViewController id="FKB-Gf-u4h" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="t63-B2-tG4">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="uMa-BG-T6U">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uMa-BG-T6U" id="b8G-1T-QW9">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="FKB-Gf-u4h" id="znh-Kc-D50"/>
-                            <outlet property="delegate" destination="FKB-Gf-u4h" id="xPQ-ju-xQW"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Album List" id="hSn-En-TH2"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YRA-sl-Jmc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="262" y="146"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="yxt-Da-4fx">
             <objects>
@@ -47,12 +20,86 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="FKB-Gf-u4h" kind="relationship" relationship="rootViewController" id="YMQ-8t-HAo"/>
+                        <segue destination="Ves-cM-5Wt" kind="relationship" relationship="rootViewController" id="aS1-hz-kJE"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IQP-B2-l4d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-690" y="146"/>
+        </scene>
+        <!--Album List-->
+        <scene sceneID="PC7-rn-eAo">
+            <objects>
+                <viewController id="Ves-cM-5Wt" customClass="AlbumListController" customModule="SampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WUf-bF-BkC"/>
+                        <viewControllerLayoutGuide type="bottom" id="lQX-lx-jGf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8Ok-Ml-R2j">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="evI-vr-Ubo">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AlbumCell" rowHeight="100" id="dnd-Ng-a64" customClass="AlbumCell" customModule="SampleApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dnd-Ng-a64" id="tIQ-7G-rjf">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4Dl-7G-zin">
+                                                    <rect key="frame" x="28" y="14" width="70" height="70"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="70" id="ZuI-hA-PA8"/>
+                                                        <constraint firstAttribute="width" secondItem="4Dl-7G-zin" secondAttribute="height" multiplier="1:1" id="d1N-Ja-RZU"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QBd-6t-LMx">
+                                                    <rect key="frame" x="122" y="39" width="225" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="QBd-6t-LMx" firstAttribute="centerY" secondItem="4Dl-7G-zin" secondAttribute="centerY" id="YWp-T0-UXr"/>
+                                                <constraint firstItem="QBd-6t-LMx" firstAttribute="leading" secondItem="4Dl-7G-zin" secondAttribute="trailing" constant="24" id="bCA-Ku-xC1"/>
+                                                <constraint firstItem="4Dl-7G-zin" firstAttribute="centerY" secondItem="tIQ-7G-rjf" secondAttribute="centerY" id="gXp-4r-zGZ"/>
+                                                <constraint firstItem="4Dl-7G-zin" firstAttribute="leading" secondItem="tIQ-7G-rjf" secondAttribute="leadingMargin" constant="20" id="ia4-yd-anz"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="QBd-6t-LMx" secondAttribute="trailing" constant="20" id="npb-Ba-U8K"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="albumImageView" destination="4Dl-7G-zin" id="pcf-el-ikZ"/>
+                                            <outlet property="albumLabel" destination="QBd-6t-LMx" id="qg0-Pv-SLl"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Ves-cM-5Wt" id="GVW-ie-Gt2"/>
+                                    <outlet property="delegate" destination="Ves-cM-5Wt" id="f0L-Dd-m7r"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="evI-vr-Ubo" firstAttribute="top" secondItem="8Ok-Ml-R2j" secondAttribute="top" id="07x-Ip-zCi"/>
+                            <constraint firstAttribute="trailing" secondItem="evI-vr-Ubo" secondAttribute="trailing" id="5ir-5q-93e"/>
+                            <constraint firstItem="lQX-lx-jGf" firstAttribute="top" secondItem="evI-vr-Ubo" secondAttribute="bottom" id="fbd-gv-HaV"/>
+                            <constraint firstItem="evI-vr-Ubo" firstAttribute="leading" secondItem="8Ok-Ml-R2j" secondAttribute="leading" id="xe0-gW-hSB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Album List" id="Tzd-TV-92r"/>
+                    <connections>
+                        <outlet property="tableView" destination="evI-vr-Ubo" id="LNm-qr-bfk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Tz-hD-1XB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="216.80000000000001" y="144.3778110944528"/>
         </scene>
     </scenes>
 </document>

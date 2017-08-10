@@ -10,17 +10,17 @@ import SwiftyJSON
 
 struct Album: Jsonable {
     
-    var albumId: Int?
-    var id: Int?
-    var title: String?
-    var url: String?
-    var thumbnailUrl: String?
+    var albumId: Int
+    var id: Int
+    var title: String
+    var url: String
+    var thumbnailUrl: String
     
     init(fromJson json: JSON) {
-        albumId = json["albumId"].int
-        id = json["id"].int
-        title = json["title"].string
-        url = json["thumbnailUrl"].string
-        thumbnailUrl = json["thumbnailUrl"].string
+        albumId = json["albumId"].int ?? 0
+        id = json["id"].int ?? 0
+        title = json["title"].string ?? ""
+        url = json["thumbnailUrl"].string ?? ""
+        thumbnailUrl = json["thumbnailUrl"].string ?? ""
     }
 }
